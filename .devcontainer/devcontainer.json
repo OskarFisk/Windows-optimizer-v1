@@ -1,0 +1,23 @@
+{
+  "name": "Windows Optimizer v1 Dev",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "dotnet.server.useOmnisharp": false
+      }
+    }
+  },
+  "postCreateCommand": "dotnet --info && dotnet restore src/WindowsOptimizer/WindowsOptimizer.csproj || true",
+  "remoteUser": "vscode"
+}
