@@ -64,7 +64,13 @@ public partial class MainWindow : Window
     private void Dashboard_Click(object s, RoutedEventArgs e) => SetPage("Dashboard");
     private void Optimize_Click(object s, RoutedEventArgs e) => SetPage("Optimize");
     private void Debloat_Click(object s, RoutedEventArgs e) => SetPage("Debloat");
-    private void Programs_Click(object s, RoutedEventArgs e) => Ninite_Click(s, e);
+    private void Programs_Click(object s, RoutedEventArgs e)
+    {
+        var selector = new ProgramSelectorWindow { Owner = this };
+        selector.ShowDialog();
+        Status.Text = "Programs Library closed. Selected programs were saved locally.";
+        ActivityText.Text = "Program package/manual selection is ready for the installer integration.";
+    }
     private void Monitor_Click(object s, RoutedEventArgs e) => SetPage("Hardware Monitor");
     private void Settings_Click(object s, RoutedEventArgs e) => SetPage("Settings");
     private void Ninite_Click(object s, RoutedEventArgs e) => OpenUrl("https://ninite.com/");
