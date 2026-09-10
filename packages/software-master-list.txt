@@ -1,0 +1,1701 @@
+FREE DESKTOP SOFTWARE MASTER LIST
+=================================
+Focus: Free-to-use desktop programs, especially Windows. Some also support Linux/macOS.
+Note: "Free" includes freeware, open-source, and free tiers. Some programs listed have optional paid versions/features.
+
+Overclocking/debloating can damage stability or Windows if used incorrectly. Always create a restore point/backups first.
+
+1. WINDOWS OPTIMIZATION / DEBLOAT / TWEAKING
+--------------------------------------------
+Microsoft PowerToys
+Chris Titus Tech WinUtil
+O&O ShutUp10++
+Win11Debloat
+Sophia Script for Windows
+BloatyNosy
+Winaero Tweaker
+Ultimate Windows Tweaker
+ThisIsWin11
+BCUninstaller
+Bulk Crap Uninstaller
+Revo Uninstaller Free
+Geek Uninstaller
+HiBit Uninstaller
+Autoruns
+Process Explorer
+Process Monitor
+RAMMap
+VMMap
+TCPView
+Disk Cleanup
+Storage Sense
+BleachBit
+Glary Utilities Free
+Wise Care 365 Free
+Wise Disk Cleaner
+Wise Registry Cleaner
+PrivaZer
+Cleanmgr+
+Windows Repair (Tweaking.com)
+Optimizer (Hellzerg)
+Privacy Eraser Free
+BleachBit
+ShutUp10
+WinTweaks
+WinAero Tweaker
+Open-Shell
+ExplorerPatcher
+StartAllBack (trial/paid; not fully free)
+TranslucentTB
+EarTrumpet
+Everything
+Listary Free
+Flow Launcher
+PowerToys Run
+QuickLook
+Files
+OneCommander
+7-Zip
+PeaZip
+
+2. GAMING OPTIMIZATION / PERFORMANCE
+-------------------------------------
+ISLC (Intelligent Standby List Cleaner)
+Process Lasso Free
+Process Governor
+ParkControl
+CPUAffinity
+TimerBench
+LatencyMon
+MSI Afterburner
+NVIDIA Profile Inspector
+NVIDIA FrameView
+AMD Software: Adrenalin Edition
+Intel PresentMon
+PresentMon
+CapFrameX
+OCAT
+GPU-Z
+CPU-Z
+HWiNFO
+HWMonitor
+Libre Hardware Monitor
+Open Hardware Monitor
+Speccy
+Core Temp
+Real Temp
+CrystalDiskInfo
+CrystalDiskMark
+AS SSD Benchmark
+ATTO Disk Benchmark
+3DMark Basic Edition
+Unigine Heaven Benchmark
+Unigine Valley Benchmark
+Unigine Superposition
+FurMark
+MSI Kombustor
+Basemark GPU
+Basemark Web
+Blender Benchmark
+Geekbench (free trial/basic availability varies)
+Cinebench
+AIDA64 Extreme trial
+PassMark PerformanceTest trial
+UserBenchmark
+MemTest86 Free
+MemTest86+
+MemTest64
+OCCT
+Prime95
+y-cruncher
+7-Zip Benchmark
+AIDA64 (trial)
+
+3. GPU OVERCLOCKING / GPU CONTROL
+----------------------------------
+MSI Afterburner
+EVGA Precision X1
+ASUS GPU Tweak III
+Gigabyte Control Center
+ZOTAC FireStorm
+Sapphire TriXX
+PowerColor Red Devil Utility
+AMD Software: Adrenalin Edition
+NVIDIA App
+NVIDIA Profile Inspector
+NVIDIA Inspector
+AMD Cleanup Utility
+DDU (Display Driver Uninstaller)
+NVCleanstall
+GPU-Z
+HWiNFO
+CapFrameX
+PresentMon
+
+4. CPU / RAM / MOTHERBOARD TUNING
+----------------------------------
+Ryzen Master
+Intel Extreme Tuning Utility (XTU)
+Intel Performance Maximizer (legacy)
+AMD Ryzen Master
+CTR / ClockTuner for Ryzen (legacy/CPU-dependent)
+PBO2 Tuner
+ZenTimings
+Thaiphoon Burner (availability/licensing varies)
+MemTest86
+MemTest86+
+TestMem5
+Karhu RAM Test (paid; included for reference, NOT free)
+HCI MemTest
+Prime95
+OCCT
+y-cruncher
+Linpack Xtreme
+Cinebench
+CPU-Z
+HWiNFO
+Core Temp
+Motherboard BIOS/UEFI utilities
+ASUS Armoury Crate
+ASUS AI Suite (board-dependent)
+MSI Center
+Gigabyte Control Center
+ASRock Motherboard Utility
+NZXT CAM
+Fan Control
+Argus Monitor (trial/paid; not fully free)
+Libre Hardware Monitor
+Open Hardware Monitor
+
+5. FAN / TEMPERATURE / HARDWARE MONITORING
+------------------------------------------
+Fan Control
+Libre Hardware Monitor
+Open Hardware Monitor
+HWiNFO
+HWMonitor
+Core Temp
+GPU-Z
+CPU-Z
+NZXT CAM
+MSI Center
+ASUS Armoury Crate
+Gigabyte Control Center
+AMD Software: Adrenalin Edition
+NVIDIA App
+SpeedFan (legacy)
+CrystalDiskInfo
+CrystalDiskMark
+Hard Disk Sentinel trial
+AIDA64 trial
+
+6. WINDOWS DRIVER / GPU CLEAN INSTALL TOOLS
+--------------------------------------------
+DDU
+AMD Cleanup Utility
+NVCleanstall
+Snappy Driver Installer Origin
+DriverStore Explorer (RAPR)
+Display Driver Uninstaller
+Intel Driver & Support Assistant
+AMD Software: Adrenalin Edition
+NVIDIA App
+GeForce Experience (legacy)
+Windows Update
+Microsoft Update Catalog
+
+7. STORAGE / DISK / FILE MANAGEMENT
+------------------------------------
+CrystalDiskInfo
+CrystalDiskMark
+GSmartControl
+HD Tune Free
+AS SSD Benchmark
+ATTO Disk Benchmark
+WinDirStat
+WizTree
+TreeSize Free
+SpaceSniffer
+Everything
+BleachBit
+7-Zip
+PeaZip
+NanaZip
+Bandizip Free
+FreeCommander
+Double Commander
+Files
+OneCommander
+Q-Dir
+Multi Commander
+Total Commander (trial/paid)
+Copy Handler
+TeraCopy Free
+FastCopy
+Robocopy
+Rsync
+Syncthing
+FreeFileSync
+DiskGenius Free
+MiniTool Partition Wizard Free
+AOMEI Partition Assistant Standard
+GParted
+Clonezilla
+Rescuezilla
+Ventoy
+Rufus
+balenaEtcher
+Win32 Disk Imager
+
+8. SYSTEM INFORMATION / DIAGNOSTICS
+------------------------------------
+HWiNFO
+CPU-Z
+GPU-Z
+HWMonitor
+Libre Hardware Monitor
+Open Hardware Monitor
+Speccy
+AIDA64 trial
+Belarc Advisor
+SiSoftware Sandra Lite
+Windows System Information
+dxdiag
+msinfo32
+Autoruns
+Process Explorer
+Process Monitor
+Resource Monitor
+Performance Monitor
+Event Viewer
+LatencyMon
+WhoCrashed
+BlueScreenView
+MemTest86
+OCCT
+Prime95
+
+9. SECURITY / ANTIVIRUS / MALWARE
+----------------------------------
+Microsoft Defender
+Malwarebytes Free
+ESET Online Scanner
+Kaspersky Virus Removal Tool
+Dr.Web CureIt
+Sophos Scan & Clean
+AdwCleaner
+ClamAV
+ClamWin
+Bitdefender Free (availability varies)
+Avast Free Antivirus
+AVG AntiVirus Free
+Avira Free Security
+Microsoft Safety Scanner
+Autoruns
+TCPView
+Process Explorer
+GlassWire Free
+Portmaster
+Simplewall
+Windows Firewall
+Sandboxie Plus
+
+10. PRIVACY / NETWORK CONTROL
+-----------------------------
+O&O ShutUp10++
+Simplewall
+Portmaster
+GlassWire Free
+Mullvad VPN (paid service, app is free)
+Proton VPN Free
+Windscribe Free
+Cloudflare WARP
+Tor Browser
+Firefox
+Brave
+LibreWolf
+Ungoogled Chromium
+DuckDuckGo Browser
+AdGuard Browser Extension
+uBlock Origin
+Privacy Badger
+Decentraleyes
+LocalCDN
+NextDNS (free tier)
+ControlD (free tier/trial varies)
+Pi-hole
+AdGuard Home
+Technitium DNS Server
+
+11. NETWORK / INTERNET TOOLS
+----------------------------
+Wireshark
+Nmap
+Zenmap
+Advanced IP Scanner
+Angry IP Scanner
+TCPView
+PortQry
+PuTTY
+KiTTY
+MobaXterm Home
+Termius Free
+OpenSSH
+WinSCP
+FileZilla
+Cyberduck
+curl
+wget
+iperf3
+Speedtest CLI
+Ookla Speedtest
+NetLimiter trial
+NetBalancer free
+PingPlotter trial
+WinMTR
+mtr
+Fing Desktop
+HTTP Toolkit
+Postman
+Insomnia
+Bruno
+Hoppscotch
+mitmproxy
+cFosSpeed trial
+Cloudflare WARP
+
+12. ARCHIVE / COMPRESSION
+--------------------------
+7-Zip
+PeaZip
+NanaZip
+Bandizip Free
+B1 Free Archiver
+Zipware
+IZArc
+Keka (macOS)
+The Unarchiver (macOS)
+WinRAR (trial; not fully free)
+Tar
+gzip
+bzip2
+xz
+Zstandard
+WinZip (trial; not fully free)
+
+13. BROWSERS
+------------
+Mozilla Firefox
+Google Chrome
+Microsoft Edge
+Brave
+Opera
+Vivaldi
+LibreWolf
+Waterfox
+Floorp
+Zen Browser
+Thorium
+Ungoogled Chromium
+Chromium
+Tor Browser
+DuckDuckGo Browser
+Pale Moon
+Falkon
+Midori
+
+14. GENERAL DESKTOP / PRODUCTIVITY
+-----------------------------------
+LibreOffice
+OnlyOffice Desktop Editors
+Apache OpenOffice
+Obsidian
+Joplin
+Standard Notes
+Notion Free
+Logseq
+Zettlr
+Typora trial
+CherryTree
+Simplenote
+Microsoft OneNote
+Google Drive
+Dropbox Basic
+MEGA
+Syncthing
+Nextcloud
+ShareX
+Greenshot
+Flameshot
+PicPick Free
+Lightshot
+Snipping Tool
+ShareX
+AutoHotkey
+AutoIt
+PowerToys
+Everything
+Flow Launcher
+Ditto
+CopyQ
+7+ Taskbar Tweaker
+EarTrumpet
+Twinkle Tray
+f.lux
+Lively Wallpaper
+Wallpaper Engine (paid; not free)
+Rainmeter
+Open-Shell
+WinCDEmu
+Virtual CloneDrive
+Ventoy
+
+15. SCREENSHOT / SCREEN RECORDING / STREAMING
+---------------------------------------------
+OBS Studio
+ShareX
+Xbox Game Bar
+NVIDIA ShadowPlay / NVIDIA App recording
+AMD Adrenalin recording
+Intel Arc Control recording
+ScreenToGif
+Kazam
+SimpleScreenRecorder
+Xournal++
+Greenshot
+Flameshot
+Kdenlive
+FFmpeg
+VLC
+MPC-HC
+MPC-BE
+
+16. VIDEO EDITING
+-----------------
+DaVinci Resolve Free
+Kdenlive
+Shotcut
+OpenShot
+VSDC Free Video Editor
+Olive
+Avidemux
+LosslessCut
+Shutter Encoder
+FFmpeg
+HandBrake
+VidCutter
+Flowblade
+Pitivi
+Blender Video Sequence Editor
+CapCut Desktop Free
+Clipchamp Free
+Lightworks Free
+HitFilm (free availability/version varies)
+VirtualDub2
+Natron
+LosslessCut
+
+17. PROFESSIONAL / ADVANCED VIDEO TOOLS
+---------------------------------------
+DaVinci Resolve
+FFmpeg
+Shutter Encoder
+HandBrake
+MKVToolNix
+MediaInfo
+Media Player Classic - BE
+VLC
+mpv
+MPC-HC
+OBS Studio
+Blender
+Natron
+Avidemux
+LosslessCut
+VirtualDub2
+ExifTool
+ImageMagick
+OpenColorIO
+x264
+x265
+SVT-AV1
+AOMedia AV1 Encoder
+VMAF
+MediaInfo
+
+18. AUDIO EDITING / RECORDING
+-----------------------------
+Audacity
+Ocenaudio
+Tenacity
+Ardour (free build availability varies)
+LMMS
+Cakewalk Next / BandLab Cakewalk availability varies
+Waveform Free
+Tracktion Waveform Free
+GarageBand (macOS)
+REAPER trial
+FFmpeg
+VLC
+OBS Studio
+R128Gain
+Mp3tag
+MusicBrainz Picard
+Exact Audio Copy
+fre:ac
+CDex
+foobar2000
+MusicBee
+AIMP
+Strawberry
+VLC
+MPC-BE
+
+19. MUSIC PRODUCTION
+--------------------
+LMMS
+Waveform Free
+Tracktion Waveform Free
+BandLab Cakewalk
+GarageBand
+Ardour
+Audacity
+Vital
+Surge XT
+Dexed
+Helm
+ZynAddSubFX
+Hydrogen
+VCV Rack Free
+Carla
+Giada
+MuseScore
+Sonic Pi
+SunVox
+Bespoke Synth
+Cardinal
+
+20. IMAGE EDITING / GRAPHICS
+----------------------------
+GIMP
+Krita
+Paint.NET
+Photopea (web)
+Inkscape
+Paint 3D
+Microsoft Paint
+PhotoDemon
+RawTherapee
+darktable
+digiKam
+ImageMagick
+IrfanView
+XnView MP
+FastStone Image Viewer
+nomacs
+JPEGView
+Upscayl
+Real-ESRGAN
+Waifu2x
+Chasys Draw IES
+Pinta
+MyPaint
+FireAlpaca
+MediBang Paint
+Piskel
+Aseprite (paid; not fully free)
+LibreSprite
+
+21. 3D MODELING / TEXTURING / VFX
+----------------------------------
+Blender
+FreeCAD
+OpenSCAD
+Wings 3D
+MeshLab
+Meshroom
+AliceVision
+CloudCompare
+MakeHuman
+MB-Lab
+Godot
+ArmorPaint (free/open source builds)
+Material Maker
+Materialize
+Quixel Mixer (availability varies)
+Substance 3D Sampler (trial/paid)
+Goxel
+MagicaVoxel
+Blockbench
+TrenchBroom
+CroCotile 3D
+Bforartists
+Houdini Apprentice
+Unreal Engine
+Unity Personal
+CryEngine
+Stride
+OGRE
+Panda3D
+
+22. GAME ENGINES
+----------------
+Godot Engine
+Unreal Engine
+Unity Personal
+Defold
+GameMaker Free
+GDevelop
+Construct Free
+Stride
+Bevy
+MonoGame
+FNA
+LÖVE
+Panda3D
+O3DE
+Amazon Lumberyard legacy
+CryEngine
+Armory3D
+Urho3D
+Flax Engine
+CopperCube Free
+Solar2D
+Ren'Py
+RPG Maker trial/free variants
+Castle Game Engine
+HaxeFlixel
+Heaps
+Cocos Creator
+Phaser
+Three.js
+Babylon.js
+PlayCanvas
+PixiJS
+Kaboom.js
+melonJS
+
+23. GAME DEVELOPMENT IDE / CODE EDITORS
+---------------------------------------
+Visual Studio Community
+Visual Studio Code
+VSCodium
+JetBrains Rider (student/free eligibility varies)
+JetBrains IntelliJ IDEA Community
+JetBrains PyCharm Community
+JetBrains CLion trial/student options
+JetBrains WebStorm trial/student options
+Eclipse
+Apache NetBeans
+Code::Blocks
+CodeLite
+Geany
+Notepad++
+Sublime Text (free evaluation; license required)
+Cursor (free tier)
+Zed
+Neovim
+Vim
+Emacs
+Kate
+GNU nano
+Helix
+Lapce
+Lite XL
+Notepad
+Windows Terminal
+
+24. PROGRAMMING LANGUAGES / SDKs / TOOLCHAINS
+---------------------------------------------
+Python
+Node.js
+Deno
+Bun
+Java OpenJDK
+Microsoft .NET SDK
+.NET Runtime
+CMake
+Ninja
+Meson
+MinGW-w64
+LLVM/Clang
+GCC
+MSYS2
+Git
+Git LFS
+GitHub Desktop
+GitKraken Free
+Sourcetree
+TortoiseGit
+Mercurial
+Rust
+Go
+Zig
+Swift
+Kotlin
+Dart
+Flutter
+Haxe
+Lua
+Ruby
+PHP
+Perl
+R
+Julia
+Anaconda
+Miniconda
+Conda
+vcpkg
+Conan
+
+25. VERSION CONTROL / GIT
+--------------------------
+Git
+GitHub Desktop
+GitLab
+Gitea
+Forgejo
+Sourcetree
+TortoiseGit
+GitKraken Free
+Fork trial
+Git Cola
+LazyGit
+GitUI
+Git Extensions
+GitHub CLI
+GitLab CLI
+
+26. UNREAL ENGINE TOOLS
+-----------------------
+Unreal Engine
+Epic Games Launcher
+Unreal Engine Launcher
+Visual Studio Community
+Rider
+Blender
+GIMP
+Krita
+Substance 3D tools (trial/paid)
+Audacity
+Reaper trial
+FMOD Studio
+Wwise
+RenderDoc
+PIX on Windows
+NVIDIA Nsight Graphics
+NVIDIA Nsight Systems
+AMD Radeon GPU Profiler
+AMD Radeon GPU Analyzer
+Intel GPA
+Visual Studio Graphics Diagnostics
+Git
+Git LFS
+Perforce Helix Core (free tiers/licensing varies)
+
+27. UNITY TOOLS
+---------------
+Unity Hub
+Unity Personal
+Visual Studio Community
+JetBrains Rider
+Blender
+GIMP
+Krita
+Audacity
+FMOD
+Wwise
+Git
+Git LFS
+GitHub Desktop
+Plastic SCM / Unity Version Control
+RenderDoc
+PIX
+Nsight Graphics
+
+28. GODOT TOOLS
+--------------
+Godot Engine
+GodotSteam
+Blender
+GIMP
+Krita
+Inkscape
+Audacity
+LMMS
+Git
+GitHub Desktop
+VS Code
+VSCodium
+Rider
+TileMap tools
+Tiled
+LDtk
+TexturePacker alternatives
+Aseprite alternatives: LibreSprite, Piskel
+DragonBones
+Spine trial
+
+29. 2D GAME ART / SPRITES / TILEMAPS
+------------------------------------
+Krita
+GIMP
+Inkscape
+Piskel
+LibreSprite
+Pixelorama
+GraphicsGale Free
+Aseprite (paid)
+Tiled
+LDtk
+Tilesetter (paid)
+TexturePacker (paid)
+Free Texture Packer
+ShoeBox
+Leshy SpriteSheet Tool
+Material Maker
+ImageMagick
+Upscayl
+
+30. 3D GAME ASSET / LEVEL TOOLS
+-------------------------------
+Blender
+Blockbench
+MagicaVoxel
+MeshLab
+Meshroom
+FreeCAD
+OpenSCAD
+TrenchBroom
+LDtk
+Tiled
+Godot
+Unreal Engine
+Unity
+GDevelop
+ArmorPaint
+Material Maker
+Materialize
+Quixel Mixer
+Poly Haven assets
+Kenney assets
+Sketchfab free assets
+Poly Haven HDRIs
+Mixamo free character/animation resources
+
+31. GAME AUDIO
+--------------
+Audacity
+Ocenaudio
+LMMS
+MuseScore
+Sonic Pi
+FMOD Studio
+Audiokinetic Wwise
+OpenAL Soft
+SoLoud
+miniaudio
+BASS (free for some uses; licensing applies)
+irrKlang
+SDL_mixer
+OpenAL
+JACK
+PipeWire
+Reaper trial
+ffmpeg
+
+32. GAME DEBUGGING / PROFILING
+------------------------------
+RenderDoc
+PIX on Windows
+NVIDIA Nsight Graphics
+NVIDIA Nsight Systems
+AMD Radeon GPU Profiler
+AMD Radeon GPU Analyzer
+Intel GPA
+Visual Studio Profiler
+dotTrace trial
+PerfView
+Windows Performance Analyzer
+Windows Performance Recorder
+PresentMon
+CapFrameX
+OCAT
+GPUView
+Process Explorer
+Process Monitor
+RAMMap
+LatencyMon
+Wireshark
+
+33. WEB DEVELOPMENT
+-------------------
+Visual Studio Code
+VSCodium
+Firefox Developer Edition
+Chrome DevTools
+Edge DevTools
+Brave DevTools
+Node.js
+Deno
+Bun
+npm
+pnpm
+Yarn
+Git
+GitHub Desktop
+Docker Desktop
+Podman Desktop
+WSL
+XAMPP
+Laragon
+MAMP
+Apache
+Nginx
+Caddy
+MariaDB
+MySQL Community
+PostgreSQL
+SQLite
+MongoDB Community
+Redis
+Valkey
+phpMyAdmin
+Adminer
+Postman
+Insomnia
+Bruno
+DBeaver Community
+HeidiSQL
+Beekeeper Studio Community
+Figma Free
+Penpot
+Inkscape
+
+34. DATABASE TOOLS
+------------------
+DBeaver Community
+SQLiteStudio
+DB Browser for SQLite
+HeidiSQL
+Beekeeper Studio Community
+pgAdmin
+MySQL Workbench
+phpMyAdmin
+Adminer
+Azure Data Studio
+MongoDB Compass
+Redis Insight
+Valkey
+MariaDB
+PostgreSQL
+SQLite
+MySQL Community Server
+
+35. DOCKER / VM / CONTAINERS
+----------------------------
+Docker Desktop
+Podman Desktop
+Podman
+Docker Engine
+VirtualBox
+VMware Workstation Pro Free for personal use
+QEMU
+KVM
+WSL
+Windows Sandbox
+Proxmox VE
+LXC
+LXD
+Multipass
+UTM
+GNOME Boxes
+Vagrant
+
+36. WINDOWS TERMINAL / CLI
+--------------------------
+Windows Terminal
+PowerShell
+PowerShell 7
+Command Prompt
+Git Bash
+MSYS2
+Cygwin
+WSL
+Ubuntu on WSL
+Debian on WSL
+Fedora on WSL
+Arch on WSL
+Oh My Posh
+Starship
+Nushell
+Clink
+fzf
+ripgrep
+fd
+bat
+eza
+btop
+htop
+jq
+yq
+curl
+wget
+7-Zip CLI
+ffmpeg
+ImageMagick
+yt-dlp
+aria2
+rsync
+rclone
+
+37. DOWNLOAD / FILE TRANSFER
+----------------------------
+Free Download Manager
+JDownloader 2
+Motrix
+aria2
+qBittorrent
+Transmission
+Deluge
+BiglyBT
+FileZilla
+WinSCP
+Cyberduck
+rclone
+Syncthing
+MEGAsync
+Google Drive
+OneDrive
+Dropbox
+Nextcloud
+
+38. MEDIA PLAYERS
+-----------------
+VLC
+mpv
+MPC-HC
+MPC-BE
+PotPlayer
+SMPlayer
+QMPlay2
+Kodi
+Jellyfin Media Player
+MusicBee
+foobar2000
+AIMP
+Strawberry
+Clementine
+DeaDBeeF
+Audacious
+
+39. EBOOK / PDF / DOCUMENT
+--------------------------
+SumatraPDF
+PDF-XChange Editor Free
+Okular
+Evince
+Zathura
+MuPDF
+LibreOffice
+OnlyOffice
+Apache OpenOffice
+Calibre
+Sigil
+Pandoc
+Zotero
+JabRef
+
+40. COMMUNICATION / CHAT
+------------------------
+Discord
+Telegram Desktop
+Signal Desktop
+Element
+Matrix clients
+WhatsApp Desktop
+Microsoft Teams Free
+Zoom
+Jitsi Meet
+Mumble
+Ventrilo
+TeamSpeak
+Steam Chat
+Guilded
+Revolt
+
+41. REMOTE DESKTOP / SUPPORT
+----------------------------
+RustDesk
+AnyDesk Free for personal use
+TeamViewer Free for personal use
+Chrome Remote Desktop
+Microsoft Remote Desktop
+Remmina
+Parsec
+Sunshine
+Moonlight
+NoMachine
+DWService
+MeshCentral
+
+42. GAME LAUNCHERS / LIBRARIES
+------------------------------
+Steam
+Epic Games Launcher
+GOG Galaxy
+Ubisoft Connect
+EA App
+Battle.net
+Xbox App
+Amazon Games
+itch.io app
+Heroic Games Launcher
+Lutris
+Playnite
+Playnite extensions
+Prism Launcher
+ATLauncher
+MultiMC forks
+Modrinth App
+CurseForge
+Thunderstore Mod Manager
+Vortex
+Mod Organizer 2
+r2modman
+BepInEx
+MelonLoader
+
+43. GAME MODDING / DEVELOPMENT
+------------------------------
+x64dbg
+Ghidra
+ILSpy
+dnSpyEx
+dotPeek
+Cheat Engine
+RenderDoc
+AssetStudio
+UABEA
+UnityPy
+Godot
+Blender
+OpenIV
+7-Zip
+WinMerge
+HxD
+ImHex
+010 Editor trial
+Notepad++
+VS Code
+Git
+Git LFS
+Lunar Client (game-specific)
+Prism Launcher
+Modrinth App
+CurseForge
+Vortex
+Mod Organizer 2
+
+44. SAVE / BACKUP / SYNC
+------------------------
+FreeFileSync
+Syncthing
+Restic
+Kopia
+Duplicati
+UrBackup
+BorgBackup
+Borgmatic
+Clonezilla
+Rescuezilla
+Veeam Agent Free
+Macrium Reflect Free (availability/version varies)
+AOMEI Backupper Standard
+EaseUS Todo Backup Free
+Duplicati
+rclone
+7-Zip
+Windows File History
+Windows Backup
+
+45. FILE SEARCH / PRODUCTIVITY
+-----------------------------
+Everything
+WizFile
+Listary Free
+Flow Launcher
+PowerToys Run
+Wox
+ueli
+Keypirinha
+Launchy
+Ditto
+CopyQ
+ClipboardFusion Free
+AutoHotkey
+AutoIt
+PowerToys
+ShareX
+
+46. WINDOWS CUSTOMIZATION
+-------------------------
+PowerToys
+Winaero Tweaker
+Open-Shell
+ExplorerPatcher
+TranslucentTB
+Windhawk
+Rainmeter
+Lively Wallpaper
+EarTrumpet
+Twinkle Tray
+7+ Taskbar Tweaker
+Start11 trial
+Files
+OneCommander
+TaskbarX
+RoundedTB
+BeWidgets
+ModernFlyouts
+NanaZip
+QuickLook
+
+47. TEXT / CODE / CONFIG EDITORS
+--------------------------------
+Notepad++
+Visual Studio Code
+VSCodium
+Sublime Text
+Notepad3
+Notepad4
+Notepad2
+Kate
+Geany
+SciTE
+PSPad
+CudaText
+EmEditor Free
+Neovim
+Vim
+Emacs
+Helix
+Zed
+Lapce
+Lite XL
+GNU nano
+Micro
+
+48. DIFF / FILE COMPARISON
+--------------------------
+WinMerge
+Meld
+KDiff3
+Beyond Compare trial
+DiffMerge
+P4Merge
+Kompare
+Git difftool
+VS Code diff
+Notepad++ Compare plugin
+
+49. FONT / ASSET MANAGEMENT
+---------------------------
+FontBase
+NexusFont
+MainType Free
+AMP Font Viewer
+RightFont trial
+BirdFont
+FontForge
+Inkscape
+Blender
+Krita
+GIMP
+digiKam
+
+50. CAD / ENGINEERING / 3D PRINTING
+-----------------------------------
+FreeCAD
+OpenSCAD
+SolveSpace
+LibreCAD
+QCAD Community Edition
+BRL-CAD
+Blender
+MeshLab
+PrusaSlicer
+OrcaSlicer
+Bambu Studio
+Cura
+UltiMaker Cura
+SuperSlicer
+Slic3r
+Lychee Slicer Free
+ChiTuBox Basic
+Repetier Host
+OctoPrint
+KiCad
+Fritzing
+LTspice
+KiCad
+FreeCAD
+
+51. ELECTRONICS / PCB / ENGINEERING
+-----------------------------------
+KiCad
+LTspice
+Qucs-S
+EasyEDA
+Fritzing
+FreeCAD
+GNU Radio
+Arduino IDE
+PlatformIO
+ESP-IDF
+STM32CubeIDE
+Microchip MPLAB X IDE
+Raspberry Pi Imager
+Balena Etcher
+PuTTY
+Tera Term
+Saleae Logic software
+Sigrok PulseView
+OpenOCD
+
+52. AI / LOCAL AI / MACHINE LEARNING
+------------------------------------
+Ollama
+LM Studio
+Jan
+GPT4All
+AnythingLLM
+Open WebUI
+Text Generation WebUI
+KoboldCpp
+llama.cpp
+KoboldAI
+ComfyUI
+AUTOMATIC1111 Stable Diffusion WebUI
+Forge WebUI
+InvokeAI
+Fooocus
+DiffusionBee
+Stable Diffusion
+Whisper
+whisper.cpp
+Piper TTS
+Coqui TTS
+ONNX Runtime
+PyTorch
+TensorFlow
+JAX
+scikit-learn
+CUDA Toolkit
+ROCm
+cuDNN
+DirectML
+
+53. AI IMAGE / VIDEO / CREATIVE
+--------------------------------
+ComfyUI
+Stable Diffusion WebUI
+Forge
+Fooocus
+InvokeAI
+Krita AI tools
+Upscayl
+Real-ESRGAN
+Waifu2x
+Video2X
+Whisper
+Whisper.cpp
+RIFE
+Flowframes
+Topaz Video AI (paid; not free)
+FFmpeg
+Blender
+Natron
+
+54. PHOTO / RAW
+---------------
+darktable
+RawTherapee
+ART
+digiKam
+RawStudio
+Filmulator
+Raw Power free features
+GIMP
+Krita
+ImageMagick
+ExifTool
+ExifToolGUI
+XnView MP
+FastStone Image Viewer
+IrfanView
+nomacs
+
+55. PDF / OCR / SCANNING
+------------------------
+NAPS2
+OCRmyPDF
+Tesseract OCR
+gImageReader
+ScanTailor Advanced
+Paperless-ngx
+PDF24 Creator
+PDFsam Basic
+Stirling-PDF
+Okular
+SumatraPDF
+LibreOffice Draw
+Xournal++
+
+56. PASSWORDS / AUTHENTICATION
+-----------------------------
+Bitwarden
+KeePass
+KeePassXC
+KeePass2Android
+Proton Pass Free
+1Password trial
+Enpass free tier
+GnuPG
+GPG4Win
+WinSCP
+VeraCrypt
+Cryptomator
+
+57. ENCRYPTION / SECURITY UTILITIES
+-----------------------------------
+VeraCrypt
+Cryptomator
+GnuPG
+GPG4Win
+7-Zip AES encryption
+KeePassXC
+Bitwarden
+OpenSSL
+age
+SOPS
+OpenSSH
+
+58. DISK ENCRYPTION / FILE RECOVERY
+-----------------------------------
+VeraCrypt
+TestDisk
+PhotoRec
+Recuva Free
+Windows File Recovery
+DMDE Free
+Puran File Recovery
+Disk Drill free tier
+R-Studio trial
+SystemRescue
+Clonezilla
+Rescuezilla
+
+59. SYSTEM RECOVERY / BOOT
+--------------------------
+Ventoy
+Rufus
+balenaEtcher
+YUMI
+Easy2Boot
+Rescuezilla
+Clonezilla
+SystemRescue
+Hiren's BootCD PE
+MediCat USB
+GParted Live
+MemTest86
+MemTest86+
+Windows Installation Media
+Microsoft Media Creation Tool
+
+60. DESKTOP GAME DEVELOPMENT - RECOMMENDED FREE STACK
+------------------------------------------------------
+Godot Engine
+Unreal Engine
+Unity Personal
+Blender
+GIMP
+Krita
+Inkscape
+Audacity
+LMMS
+OBS Studio
+DaVinci Resolve Free
+Kdenlive
+VS Code
+Visual Studio Community
+Git
+GitHub Desktop
+Git LFS
+7-Zip
+WinMerge
+RenderDoc
+HWiNFO
+GPU-Z
+CPU-Z
+CapFrameX
+PresentMon
+Wireshark
+Tiled
+LDtk
+Blockbench
+Material Maker
+ArmorPaint
+Poly Haven
+Kenney assets
+Mixamo
+FMOD Studio
+Wwise
+Ollama
+Python
+Node.js
+
+61. VIDEO CREATOR - RECOMMENDED FREE STACK
+------------------------------------------
+DaVinci Resolve Free
+Kdenlive
+Shotcut
+OBS Studio
+Audacity
+GIMP
+Krita
+Blender
+FFmpeg
+HandBrake
+Shutter Encoder
+MediaInfo
+VLC
+MKVToolNix
+LosslessCut
+CapCut Desktop
+Natron
+Upscayl
+Flowframes
+Whisper
+
+62. PC GAMER - RECOMMENDED FREE STACK
+-------------------------------------
+Microsoft PowerToys
+WinUtil
+Winaero Tweaker
+O&O ShutUp10++
+ISLC
+Fan Control
+HWiNFO
+GPU-Z
+CPU-Z
+MSI Afterburner
+DDU
+NVCleanstall
+CapFrameX
+PresentMon
+OCAT
+RTSS (RivaTuner Statistics Server)
+LatencyMon
+CrystalDiskInfo
+CrystalDiskMark
+7-Zip
+Everything
+WizTree
+ShareX
+OBS Studio
+VLC
+Discord
+Steam
+Playnite
+qBittorrent
+Firefox
+Brave
+uBlock Origin
+
+63. USEFUL SMALL UTILITIES
+--------------------------
+7-Zip
+Everything
+PowerToys
+ShareX
+Rufus
+Ventoy
+WinMerge
+Notepad++
+VLC
+SumatraPDF
+NanaZip
+QuickLook
+EarTrumpet
+Twinkle Tray
+Fan Control
+HWiNFO
+CPU-Z
+GPU-Z
+CrystalDiskInfo
+WizTree
+WinDirStat
+Autoruns
+Process Explorer
+Process Monitor
+TCPView
+RAMMap
+LatencyMon
+TreeSize Free
+BleachBit
+FreeFileSync
+Syncthing
+RustDesk
+PuTTY
+WinSCP
+FileZilla
+qBittorrent
+JDownloader 2
+FFmpeg
+HandBrake
+MediaInfo
+MKVToolNix
+yt-dlp
+rclone
+Everything Toolbar
+AutoHotkey
+Ditto
+CopyQ
+Flow Launcher
+
+64. IMPORTANT SAFETY NOTES
+--------------------------
+Do not run multiple debloaters/optimizers at the same time.
+Avoid random "FPS booster" executables and registry-cleaner packs.
+Make a Windows restore point before system tweaking.
+Back up important files before BIOS/CPU/RAM/GPU overclocking.
+Never copy an overclock from another PC without testing stability.
+Monitor CPU/GPU temperatures and voltage.
+Use OCCT/Prime95/MemTest86 or similar tools to test stability.
+DDU is normally used when changing/reinstalling graphics drivers, not as a routine daily optimizer.
+Windows Defender should not be disabled just for gaming FPS.
+Registry cleaning usually provides little useful performance benefit and can cause problems.
+BIOS/UEFI firmware updates should use the motherboard manufacturer's official tool.
+Prefer official developer websites/GitHub repositories for downloads.
+
+65. HIGH-VALUE FREE PICKS
+-------------------------
+Optimization: PowerToys, WinUtil, Winaero Tweaker, O&O ShutUp10++, BCUninstaller
+Gaming: MSI Afterburner, RTSS, HWiNFO, CapFrameX, PresentMon, OCAT, ISLC
+Hardware: CPU-Z, GPU-Z, HWiNFO, CrystalDiskInfo, OCCT
+Drivers: DDU, NVCleanstall, DriverStore Explorer
+Files: 7-Zip, Everything, WizTree, WinMerge, FreeFileSync
+Security: Defender, Malwarebytes Free, AdwCleaner, simplewall
+Video: DaVinci Resolve Free, Kdenlive, Shotcut, OBS Studio, FFmpeg
+Audio: Audacity, LMMS, MusicBee, foobar2000
+Graphics: GIMP, Krita, Inkscape, darktable, RawTherapee
+3D: Blender, FreeCAD, MeshLab, Blockbench
+Game Dev: Godot, Unreal Engine, Unity Personal, GDevelop
+Coding: VS Code, Visual Studio Community, VSCodium, Git
+AI: Ollama, LM Studio, ComfyUI, llama.cpp
+Networking: Wireshark, Nmap, WinSCP, PuTTY
+Recovery: Ventoy, Rufus, Clonezilla, Rescuezilla, TestDisk/PhotoRec
+Privacy: Firefox, LibreWolf, Brave, uBlock Origin, Proton VPN Free
+Remote access: RustDesk, Moonlight + Sunshine, Chrome Remote Desktop
