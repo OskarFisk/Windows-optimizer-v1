@@ -1,42 +1,104 @@
-# Windows Optimizer v1
+# ⚡ Windows Optimizer v1
 
-A modern Windows desktop/laptop optimization and maintenance toolkit.
+A modern, modular Windows performance, maintenance, debloat and software toolkit — built to make optimization safer, clearer and easier.
 
-## v1 desktop build
-The first functional desktop foundation is a .NET 8 WPF application with a redesigned performance-cockpit UI, live process/uptime cards, safe maintenance actions, UAC-on-demand operations and an integrated Programs Library launcher.
+## 📦 Download
 
-### Included now
-- Modern dark performance-cockpit interface.
-- CPU/process-load, managed-memory, system-drive and uptime cards.
-- Temporary-file cleanup with locked-file skipping.
-- DNS cache flush with administrator elevation when required.
+**Windows setup:** GitHub Actions builds `WindowsOptimizerSetup.exe` automatically from `installer/windows/WindowsOptimizerSetup.iss`.
+
+- **Setup.exe:** normal Windows installer for x64-compatible PCs.
+- **Portable x64:** self-contained ZIP.
+- **Portable ARM64:** self-contained ZIP.
+
+Open the repository's **Actions → Windows Optimizer releases** workflow to download the latest successful build artifact. Version tags (`v*`) also create a GitHub Release with the generated packages.
+
+## ✨ What it includes
+
+- Modern dark performance-cockpit UI.
+- CPU/process, memory, system-drive and uptime monitoring.
+- Safe temporary-file cleanup.
+- DNS cache maintenance with UAC elevation when required.
 - Conservative application-memory cleanup.
 - Windows Update shortcut.
+- Programs Library with the supplied master software catalog.
+- Package modes: Mini, Standard, Full, Gaming + Overclocking, Video + Photo and Manual.
 - Ninite integration through the official Ninite selector.
-- Launchers for MSI Afterburner, AMD Ryzen Master and BlueStacks using their official vendor pages.
-- Categorized `ProgramLibrary.json` foundation.
-- Windows x64 and ARM64 self-contained release workflow.
+- Launchers/integrations for MSI Afterburner, AMD Ryzen Master and BlueStacks.
+- Windows x64 and ARM64 self-contained builds.
+- Automated Windows `setup.exe` generation.
 
-## Ninite
-Ninite is integrated as a first-class Programs Library entry. The app opens the official Ninite selector instead of redistributing Ninite's installer. This keeps the project from bundling third-party proprietary installers while still giving the user one-click access to Ninite.
+## 🧰 Setup installer
 
-## Release packages
-`.github/workflows/release.yml` builds self-contained `win-x64` and `win-arm64` ZIP packages. Pushing a version tag such as `v1.0.0` creates a GitHub Release and attaches both packages. The workflow can also be started manually from GitHub Actions to produce downloadable build artifacts.
+The installer is designed to install the application itself, create Start Menu shortcuts and optionally create a desktop shortcut.
 
-## Safety
-The app must not silently disable security software, Windows Update, firewall protections, Defender, or other critical protections. It must not automatically apply unsafe voltage/clock changes. Hardware-tuning utilities are integrations/launchers; users remain in control of overclocking.
+The application is published **self-contained with .NET 8**, so users do **not** need to install the .NET runtime separately. The setup performs a safe Windows-version check and detects `winget` for optional software installation through the Programs Library.
 
-Third-party installers are not redistributed by this project. The Programs Library points to official vendor pages and Ninite rather than bundling their binaries.
+Third-party proprietary programs are not silently bundled or redistributed. If a selected application requires its own installer or license, Windows Optimizer should use an official publisher source or Windows Package Manager where appropriate and with user confirmation.
 
-## Build locally
-Install the .NET 8 SDK on Windows and run `BUILD_WINDOWS.ps1` or:
+## 📚 Programs Library
 
-`dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true`
+The repository contains the supplied desktop-software master list and a categorized program catalog. The selector supports searching, category filtering, package filtering, tags and selecting individual programs.
 
-## Documentation
+### Packages
+
+| Package | Purpose |
+|---|---|
+| **Mini** | Low-memory core toolkit |
+| **Standard** | Recommended everyday setup |
+| **Full** | Full available catalog without fake/padding files |
+| **Gaming + Overclocking** | Gaming, monitoring and tuning tools |
+| **Video + Photo** | Creator, video, image and graphics tools |
+| **Manual** | Choose individual programs |
+
+## 🛡️ Safety first
+
+Windows Optimizer must never silently:
+
+- disable Defender, firewall or other security protections;
+- disable Windows Update;
+- delete critical Windows files;
+- apply unsafe registry changes;
+- apply dangerous voltage/clock settings;
+- redistribute proprietary installers without permission.
+
+Administrative elevation is requested only when an operation actually requires it.
+
+## 🏗️ Build locally
+
+Install the .NET 8 SDK on Windows:
+
+```powershell
+dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+```
+
+To build the Windows setup installer locally, install Inno Setup 6 and compile:
+
+```powershell
+ISCC.exe installer/windows/WindowsOptimizerSetup.iss
+```
+
+The generated installer is placed in `pkg/Windows/WindowsOptimizerSetup.exe`.
+
+## 🤖 Automated builds
+
+`.github/workflows/release.yml` builds on pushes to `main`, manual workflow runs and version tags. It produces:
+
+- `WindowsOptimizerSetup.exe`
+- `WindowsOptimizer-win-x64.zip`
+- `WindowsOptimizer-win-arm64.zip`
+
+A version tag such as `v1.0.0` additionally publishes the generated files to a GitHub Release.
+
+## 📖 Documentation
+
 - [Architecture](docs/ARCHITECTURE.md)
-- [Windows 11 build/setup](docs/BUILD-WINDOWS.md)
+- [Windows build/setup](docs/BUILD-WINDOWS.md)
 - [Safety](docs/SAFETY.md)
 - [Programs Library](docs/PROGRAMS-LIBRARY.md)
 - [Optimization profiles](docs/OPTIMIZATION.md)
 - [Portability](docs/PORTABILITY.md)
+- [Package output](pkg/README.md)
+
+## 🚀 Project direction
+
+The goal is a serious all-in-one desktop utility: optimization, cleanup, monitoring, debloat, software installation, gaming tools, creator tools and hardware utilities in one controlled interface — while keeping risky actions visible and reversible where possible.
