@@ -1,1 +1,25 @@
-{"schemaVersion":2,"source":"free_desktop_software_master_list(1).txt","sourceNote":"The catalog preserves the source categories and deduplicates exact case-insensitive program names.","entryCount":981,"categoryCount":65,"selectionModes":["mini","standard","full","gaming-overclocking","video-photo","manual"],"manualSelection":{"enabled":true,"description":"Show every catalog entry with search, category filters, package tags, OS compatibility and individual selection."},"packs":{"mini":{"description":"Low-memory/core utilities; no large creative suites by default.","defaultSelection":"curated-core"},"standard":{"description":"Recommended desktop package with core utilities and commonly used tools.","defaultSelection":"recommended"},"full":{"description":"All selected/available components. Target installer payload: 5-7 GB when licensed/redistributable assets are included.","sizePolicy":"Do not pad the package. Large third-party installers must be downloaded from official sources when redistribution is not permitted."},"gaming-overclocking":{"description":"Gaming performance, monitoring, benchmarking, GPU control and CPU/RAM tuning.","tagMatch":["gaming","overclocking"]},"video-photo":{"description":"Video editing, recording, encoding, image editing, RAW/photo and creative utilities.","tagMatch":["video","photo"]},"manual":{"description":"User selects individual programs from the complete catalog.","allCatalogEntries":true}},"programs":[{"id":"microsoft-powertoys","name":"Microsoft PowerToys","categories":["WINDOWS OPTIMIZATION / DEBLOAT / TWEAKING","GENERAL DESKTOP / PRODUCTIVITY","WINDOWS CUSTOMIZATION","USEFUL SMALL UTILITIES"],"tags":["gaming"],"source_lines":[10,436,1243,1621],"selection":"manual"}]}
+{
+  "schemaVersion": 3,
+  "sourceFile": "packages/software-master-list.txt",
+  "catalogMode": "build-from-source",
+  "selectionModes": ["mini", "standard", "full", "gaming-overclocking", "video-photo", "manual"],
+  "manualSelection": true,
+  "description": "The installer/build pipeline parses every program entry from the supplied master list, preserves its original numbered category/categories, removes exact duplicate names for the selectable program list, and assigns additional package tags.",
+  "packs": {
+    "mini": {"name": "Mini", "target": "Low-memory devices", "selection": "curated-core"},
+    "standard": {"name": "Standard", "target": "Normal desktops and laptops", "selection": "recommended"},
+    "full": {"name": "Full", "target": "Power users", "selection": "all-available", "targetSize": "5-7 GB", "sizeRule": "Use real components/downloads only; never pad the package."},
+    "gaming-overclocking": {"name": "Gaming + Overclocking", "selectionTags": ["gaming", "overclocking"]},
+    "video-photo": {"name": "Video + Photo", "selectionTags": ["video", "photo"]},
+    "manual": {"name": "Manual selection", "selection": "user-selected-individual-programs"}
+  },
+  "generatedFields": ["id", "name", "categories", "tags", "sourceLines", "selection"],
+  "tagRules": {
+    "gaming": "Gaming optimization/performance, game engines, game development, game audio, game debugging/profiling, game modding and game asset categories.",
+    "overclocking": "GPU overclocking/control, CPU/RAM/motherboard tuning, hardware monitoring and gaming performance categories, plus recognized tuning/monitoring tools.",
+    "video": "Video editing, advanced video, screen recording/streaming, AI image/video and video-creator categories, plus recognized video tools.",
+    "photo": "Image editing/graphics and Photo/RAW categories, plus recognized image/RAW tools.",
+    "development": "Game-engine, game-development, programming, SDK/toolchain and developer-tool categories."
+  },
+  "licensingPolicy": "Entries marked trial/paid/availability varies remain visible but must not be silently redistributed as free binaries. The installer should prefer official vendor/developer download sources."
+}
