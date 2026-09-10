@@ -1,0 +1,15 @@
+{
+  "Ninite": {
+    "url": "https://ninite.com/",
+    "description": "Official Ninite selector. Choose supported apps, generate the installer, then run it with Windows elevation if required."
+  },
+  "Categories": {
+    "Browsers": ["Chrome", "Firefox", "Brave", "Opera", "Vivaldi"],
+    "Gaming": ["Steam", "Discord", "Epic Games Launcher", "BlueStacks"],
+    "Media": ["VLC", "Audacity", "HandBrake", "Spotify"],
+    "Utilities": ["7-Zip", "Everything", "WinRAR", "WinMerge"],
+    "Development": ["VS Code", "Git", "Python", "Java"],
+    "Tuning": ["MSI Afterburner", "AMD Ryzen Master", "Intel Extreme Tuning Utility"]
+  },
+  "Policy": "Third-party installers are not redistributed by Windows Optimizer. Buttons open official vendor or Ninite pages."
+}
