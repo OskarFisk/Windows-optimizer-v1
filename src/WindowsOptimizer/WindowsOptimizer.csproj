@@ -9,9 +9,6 @@
     <RootNamespace>WindowsOptimizer</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MasterListCatalog.cs" />
-    <Page Include="ProgramSelectorWindow.xaml" />
-    <Compile Include="ProgramSelectorWindow.xaml.cs" />
     <Content Include="..\..\packages\software-master-list.txt" Link="software-master-list.txt" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
