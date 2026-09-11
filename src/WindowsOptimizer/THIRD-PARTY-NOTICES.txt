@@ -1,0 +1,12 @@
+Windows Optimizer v1 - Third-party notices
+
+LibreHardwareMonitorLib
+Copyright (C) LibreHardwareMonitor and contributors.
+Licensed under the Mozilla Public License 2.0 (MPL-2.0).
+
+Project: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor
+NuGet package: https://www.nuget.org/packages/LibreHardwareMonitorLib/
+
+The LibreHardwareMonitor project includes additional third-party components
+with their own licenses. See the upstream project's THIRD-PARTY-NOTICES.txt
+for the complete list and license texts.
