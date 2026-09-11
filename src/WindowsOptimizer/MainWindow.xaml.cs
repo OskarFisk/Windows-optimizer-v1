@@ -221,7 +221,7 @@ public partial class MainWindow : Window
 
     private static async Task<string?> EnsureRamMapAsync()
     {
-        var toolsDirectory = Path.Combine(AppContext.BaseDirectory, "tools");
+        var toolsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WindowsOptimizer", "tools");
         var ramMapPath = Path.Combine(toolsDirectory, "RAMMap.exe");
 
         if (File.Exists(ramMapPath))
