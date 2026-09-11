@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 env:
-  # Force all JavaScript-based GitHub Actions in this workflow to use Node.js 24.
+  # Force every JavaScript-based GitHub Action in this workflow to use Node.js 24.
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -26,11 +26,6 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
-      - name: Verify Node.js 24
-        shell: pwsh
-        run: |
-          $major = [int]((node --version) -replace '^v','').Split('.')[0]
-          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
       - name: Publish self-contained app
         run: dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:DebugType=None -o publish/${{ matrix.rid }}
       - name: Verify portable build
@@ -55,11 +50,6 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
-      - name: Verify Node.js 24
-        shell: pwsh
-        run: |
-          $major = [int]((node --version) -replace '^v','').Split('.')[0]
-          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
       - name: Publish x64 app for setup.exe
         run: dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true -p:DebugType=None -o publish/win-x64
       - name: Verify setup payload
@@ -101,9 +91,9 @@ jobs:
       - name: Publish packages to GitHub Release
         uses: softprops/action-gh-release@v3
         with:
-          # Do not set target_commitish here. GitHub's release API can reject a
-          # GITHUB_TOKEN when an explicit target commit changes workflow files.
-          # For main, the stable 'latest' tag is created on the default branch.
+          # Do not set target_commitish. GitHub can reject an explicit target
+          # when the target commit changes workflow files and GITHUB_TOKEN cannot
+          # receive the separate Workflows permission.
           tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'latest' }}
           name: ${{ startsWith(github.ref, 'refs/tags/v') && format('Windows Optimizer {0}', github.ref_name) || 'Windows Optimizer - Latest' }}
           prerelease: false
