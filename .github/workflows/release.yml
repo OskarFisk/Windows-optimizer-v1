@@ -26,6 +26,11 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
+      - name: Verify Node.js 24
+        shell: pwsh
+        run: |
+          $major = [int]((node --version) -replace '^v','').Split('.')[0]
+          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
       - name: Publish self-contained app
         run: dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r ${{ matrix.rid }} --self-contained true -p:DebugType=None -o publish/${{ matrix.rid }}
       - name: Verify portable build
@@ -50,6 +55,11 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
+      - name: Verify Node.js 24
+        shell: pwsh
+        run: |
+          $major = [int]((node --version) -replace '^v','').Split('.')[0]
+          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
       - name: Publish x64 app for setup.exe
         run: dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true -p:DebugType=None -o publish/win-x64
       - name: Verify setup payload
@@ -73,20 +83,32 @@ jobs:
           path: pkg/Windows/WindowsOptimizerSetup.exe
 
   release:
-    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
     needs: [build-windows, build-setup]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/download-artifact@v7
         with:
           path: release-files
+          merge-multiple: true
+      - name: Verify release files
+        shell: bash
+        run: |
+          test -f release-files/WindowsOptimizerSetup.exe
+          test -f release-files/WindowsOptimizer-win-x64.zip
       - name: Publish packages to GitHub Release
         uses: softprops/action-gh-release@v3
         with:
+          # Do not set target_commitish here. GitHub's release API can reject a
+          # GITHUB_TOKEN when an explicit target commit changes workflow files.
+          # For main, the stable 'latest' tag is created on the default branch.
           tag_name: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || 'latest' }}
-          target_commitish: ${{ github.sha }}
           name: ${{ startsWith(github.ref, 'refs/tags/v') && format('Windows Optimizer {0}', github.ref_name) || 'Windows Optimizer - Latest' }}
           prerelease: false
           make_latest: true
-          files: release-files/**/*
-          generate_release_notes: true
+          files: |
+            release-files/WindowsOptimizerSetup.exe
+            release-files/WindowsOptimizer-win-x64.zip
+          generate_release_notes: false
