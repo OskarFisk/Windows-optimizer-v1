@@ -85,8 +85,7 @@ public sealed class HardwareMonitorService : IDisposable
     private static bool IsGpu(IHardware hardware) =>
         hardware.HardwareType is HardwareType.GpuNvidia
             or HardwareType.GpuAmd
-            or HardwareType.GpuIntel
-            or HardwareType.GpuAti;
+            or HardwareType.GpuIntel;
 
     private static double? FindCpuTemperature(IHardware? cpu)
     {
