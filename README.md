@@ -6,15 +6,18 @@ A modern, modular Windows performance, maintenance, debloat and software toolkit
 
 ### 🟢 Windows Installer — Recommended
 
-[**⬇️ Download Windows Optimizer Setup.exe**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/download/latest/WindowsOptimizerSetup.exe)
+[**⬇️ Download Windows Optimizer Setup.exe**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/latest/download/WindowsOptimizerSetup.exe)
 
-The button above always points to the **latest successful Windows x64 installer**. The installer is self-contained, requests Windows administrator permission through UAC, and creates the normal Start Menu/optional desktop shortcuts.
+The button above always points to the **latest published Windows x64 installer**. The installer is self-contained, requests Windows administrator permission through UAC, and creates the normal Start Menu/optional desktop shortcuts.
 
 **Other packages:**
 
-- [**Windows x64 Portable ZIP**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/download/latest/WindowsOptimizer-win-x64.zip) — no installation required.
+- [**Windows x64 Portable ZIP**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/latest/download/WindowsOptimizer-win-x64.zip) — no installation required.
+- [**SHA-256 checksums**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/latest/download/SHA256SUMS.txt) — verify downloaded packages.
 - **GitHub Actions artifact** — available from the latest successful `Windows Optimizer releases` workflow.
 - **Versioned releases** — version tags (`v*`) publish their generated packages to GitHub Releases.
+
+> **Current build scope:** the production desktop application and automated release package are currently Windows x64. Linux, macOS and Windows ARM64 are project targets, not yet published desktop builds.
 
 ## ✨ What it includes
 
@@ -93,6 +96,7 @@ Generated packages include:
 
 - `WindowsOptimizerSetup.exe`
 - `WindowsOptimizer-win-x64.zip`
+- `SHA256SUMS.txt`
 
 A version tag such as `v1.0.0` additionally publishes the generated files to a versioned GitHub Release.
 
