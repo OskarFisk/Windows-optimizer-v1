@@ -11,7 +11,9 @@ public partial class MainWindow : Window
 {
     private readonly DispatcherTimer _timer = new() { Interval = TimeSpan.FromSeconds(1) };
     private readonly Stopwatch _cpuWatch = new();
+    private readonly HardwareMonitorService? _hardwareMonitor;
     private TimeSpan _lastCpu;
+    private bool _hardwareRefreshRunning;
 
     private const string RamMapDownloadUrl = "https://live.sysinternals.com/RAMMap.exe";
 
@@ -35,13 +37,30 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        Loaded += (_, _) =>
+
+        try
+        {
+            _hardwareMonitor = new HardwareMonitorService();
+        }
+        catch (Exception ex)
+        {
+            ActivityText.Text = $"Hardware sensor initialization failed: {ex.Message}";
+        }
+
+        Loaded += async (_, _) =>
         {
             Scan();
-            _timer.Tick += (_, _) => TimerTick();
+            _timer.Tick += async (_, _) => await TimerTickAsync();
             _timer.Start();
+            await RefreshHardwareAsync();
         };
-        Closed += (_, _) => _timer.Stop();
+
+        Closed += (_, _) =>
+        {
+            _timer.Stop();
+            _hardwareMonitor?.Dispose();
+        };
+
         _lastCpu = Process.GetCurrentProcess().TotalProcessorTime;
         _cpuWatch.Start();
     }
@@ -58,11 +77,11 @@ public partial class MainWindow : Window
         RamSubText.Text = memory is null ? "physical memory" : $"{memory.Value.Load}% in use";
         DiskText.Text = $"{drive.AvailableFreeSpace / 1024d / 1024 / 1024:0.0} GB";
         UptimeText.Text = FormatUptime(Environment.TickCount64);
-        Status.Text = "System scan complete. No optimization was applied.";
+        Status.Text = "System scan complete. Live hardware monitoring is active when sensors are available.";
         ActivityText.Text = $"Last scan: {DateTime.Now:HH:mm:ss}  •  {Environment.OSVersion.VersionString}  •  {Environment.ProcessorCount} logical processors";
     }
 
-    private void TimerTick()
+    private async Task TimerTickAsync()
     {
         try
         {
@@ -79,8 +98,78 @@ public partial class MainWindow : Window
                 RamText.Text = $"{memory.Value.UsedGb:0.0}/{memory.Value.TotalGb:0.0} GB";
                 RamSubText.Text = $"{memory.Value.Load}% in use";
             }
+
+            await RefreshHardwareAsync();
         }
         catch { }
+    }
+
+    private async Task RefreshHardwareAsync()
+    {
+        if (_hardwareMonitor is null || _hardwareRefreshRunning)
+            return;
+
+        _hardwareRefreshRunning = true;
+        try
+        {
+            var snapshot = await Task.Run(() => _hardwareMonitor.Read());
+
+            CpuTempText.Text = snapshot.CpuTemperature.HasValue
+                ? $"{snapshot.CpuTemperature.Value:0.0} °C"
+                : "--";
+            CpuTempSubText.Text = snapshot.CpuTemperature.HasValue
+                ? snapshot.CpuName
+                : "temperature sensor unavailable";
+
+            GpuTempText.Text = snapshot.GpuTemperature.HasValue
+                ? $"{snapshot.GpuTemperature.Value:0.0} °C"
+                : "--";
+            GpuTempSubText.Text = snapshot.GpuTemperature.HasValue
+                ? snapshot.GpuName
+                : "GPU temperature unavailable";
+
+            if (snapshot.Fans.Count == 0)
+            {
+                FanText.Text = "--";
+                FanSubText.Text = "No fan RPM sensors available";
+            }
+            else
+            {
+                FanText.Text = snapshot.Fans.Count == 1
+                    ? $"{snapshot.Fans[0].Rpm:0} RPM"
+                    : $"{snapshot.Fans.Count} fans";
+                FanSubText.Text = string.Join("  •  ", snapshot.Fans.Select(f => $"{ShortHardwareName(f.HardwareName)}: {f.Rpm:0} RPM"));
+            }
+
+            var monitorDetails = new List<string>
+            {
+                $"CPU: {snapshot.CpuTemperature?.ToString("0.0") ?? "--"} °C  •  {snapshot.CpuName}",
+                $"GPU: {snapshot.GpuTemperature?.ToString("0.0") ?? "--"} °C  •  {snapshot.GpuName}"
+            };
+
+            monitorDetails.Add(snapshot.Fans.Count == 0
+                ? "Fans: no RPM sensors reported by the hardware/driver."
+                : "Fans: " + string.Join("  |  ", snapshot.Fans.Select(f => $"{f.SensorName} = {f.Rpm:0} RPM")));
+
+            HardwareDetailsText.Text = string.Join(Environment.NewLine, monitorDetails);
+            HardwareStatusText.Text = $"Live sensors • updated {snapshot.Timestamp:HH:mm:ss}";
+        }
+        catch (Exception ex)
+        {
+            HardwareStatusText.Text = "Hardware sensors unavailable";
+            HardwareDetailsText.Text = $"The monitor could not read hardware sensors. Some sensors require administrator access or a compatible motherboard/GPU driver. {ex.Message}";
+        }
+        finally
+        {
+            _hardwareRefreshRunning = false;
+        }
+    }
+
+    private static string ShortHardwareName(string name)
+    {
+        if (name.Length <= 22)
+            return name;
+        return name[..19] + "…";
     }
 
     private static (double UsedGb, double TotalGb, uint Load)? GetMemoryStatus()
@@ -118,7 +207,12 @@ public partial class MainWindow : Window
         ActivityText.Text = "Program package/manual selection is ready for the installer integration.";
     }
 
-    private void Monitor_Click(object s, RoutedEventArgs e) => SetPage("Hardware Monitor");
+    private void Monitor_Click(object s, RoutedEventArgs e)
+    {
+        SetPage("Hardware Monitor");
+        _ = RefreshHardwareAsync();
+    }
+
     private void Settings_Click(object s, RoutedEventArgs e) => SetPage("Settings");
     private void Ninite_Click(object s, RoutedEventArgs e) => OpenUrl("https://ninite.com/");
     private void Afterburner_Click(object s, RoutedEventArgs e) => OpenUrl("https://www.msi.com/Landing/afterburner/graphics-cards");
