@@ -7,7 +7,7 @@ on:
     tags: ['v*']
 
 permissions:
-  contents: write
+  contents: read
 
 env:
   # Force all JavaScript-based GitHub Actions in this workflow to use Node.js 24.
@@ -26,6 +26,12 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
+
+      - name: Verify Node.js 24
+        shell: pwsh
+        run: |
+          $major = [int]((node --version) -replace '^v','').Split('.')[0]
+          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
 
       - name: Restore
         run: dotnet restore src/WindowsOptimizer/WindowsOptimizer.csproj
@@ -70,19 +76,16 @@ jobs:
             ForEach-Object { "$($_.Hash)  WindowsOptimizer-win-x64.zip" } |
             Add-Content 'pkg/Windows/SHA256SUMS.txt'
 
+      - name: Verify package files
+        shell: pwsh
+        run: |
+          if (!(Test-Path 'pkg/Windows/WindowsOptimizerSetup.exe')) { throw 'Missing setup.exe' }
+          if (!(Test-Path 'pkg/Windows/WindowsOptimizer-win-x64.zip')) { throw 'Missing portable ZIP' }
+          if (!(Test-Path 'pkg/Windows/SHA256SUMS.txt')) { throw 'Missing SHA256SUMS.txt' }
+
       - name: Upload installer artifact
         uses: actions/upload-artifact@v6
         with:
           name: WindowsOptimizer-Windows
           path: pkg/Windows/*
           if-no-files-found: error
-
-      - name: Publish GitHub Release assets
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v3
-        with:
-          files: |
-            pkg/Windows/WindowsOptimizerSetup.exe
-            pkg/Windows/WindowsOptimizer-win-x64.zip
-            pkg/Windows/SHA256SUMS.txt
-          generate_release_notes: true
