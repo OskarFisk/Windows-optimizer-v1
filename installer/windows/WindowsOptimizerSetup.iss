@@ -53,7 +53,7 @@ Name: "{autodesktop}\Windows Optimizer v1"; Filename: "{app}\{#MyAppExeName}"; T
 [Run]
 Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -File ""{app}\installer\prerequisites.ps1"""; StatusMsg: "Checking Windows prerequisites..."; Flags: runhidden waituntilterminated
 Filename: "powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -File ""{app}\installer\install-components.ps1"" -InstallDirectory ""{app}"""; StatusMsg: "Preparing required Windows components..."; Flags: runhidden waituntilterminated
-Filename: "{app}\{#MyAppExeName}"; Description: "Launch Windows Optimizer v1"; Flags: nowait postinstall skipifsilent; Tasks: autorun
+Filename: "{app}\{#MyAppExeName}"; Description: "Launch Windows Optimizer v1"; Verb: "runas"; Flags: shellexec nowait postinstall skipifsilent; Tasks: autorun
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}\installer"
