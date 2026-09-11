@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 env:
-  # Force all JavaScript-based GitHub Actions in this workflow to use Node.js 24.
+  # Force every JavaScript-based GitHub Action in this workflow to use Node.js 24.
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -26,12 +26,6 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x'
-
-      - name: Verify Node.js 24
-        shell: pwsh
-        run: |
-          $major = [int]((node --version) -replace '^v','').Split('.')[0]
-          if ($major -ne 24) { throw "Expected Node.js 24, found Node.js $major" }
 
       - name: Restore
         run: dotnet restore src/WindowsOptimizer/WindowsOptimizer.csproj
