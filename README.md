@@ -4,32 +4,38 @@ A modern, modular Windows performance, maintenance, debloat and software toolkit
 
 ## 📦 Download
 
-**Windows setup:** GitHub Actions builds `WindowsOptimizerSetup.exe` automatically from `installer/windows/WindowsOptimizerSetup.iss`.
+### 🟢 Windows Installer — Recommended
 
-- **Setup.exe:** normal Windows installer for x64-compatible PCs.
-- **Portable x64:** self-contained ZIP.
-- **Portable ARM64:** self-contained ZIP.
+[**⬇️ Download Windows Optimizer Setup.exe**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/download/latest/WindowsOptimizerSetup.exe)
 
-Open the repository's **Actions → Windows Optimizer releases** workflow to download the latest successful build artifact. Version tags (`v*`) also create a GitHub Release with the generated packages.
+The button above always points to the **latest successful Windows x64 installer**. The installer is self-contained, requests Windows administrator permission through UAC, and creates the normal Start Menu/optional desktop shortcuts.
+
+**Other packages:**
+
+- [**Windows x64 Portable ZIP**](https://github.com/OskarFisk/Windows-optimizer-v1/releases/download/latest/WindowsOptimizer-win-x64.zip) — no installation required.
+- **GitHub Actions artifact** — available from the latest successful `Windows Optimizer releases` workflow.
+- **Versioned releases** — version tags (`v*`) publish their generated packages to GitHub Releases.
 
 ## ✨ What it includes
 
 - Modern dark performance-cockpit UI.
-- CPU/process, memory, system-drive and uptime monitoring.
+- CPU/process, physical memory, system-drive and uptime monitoring.
+- Live CPU and GPU temperature monitoring when supported sensors are available.
+- Live fan RPM monitoring when supported hardware/driver sensors are available.
 - Safe temporary-file cleanup.
-- DNS cache maintenance with UAC elevation when required.
-- Conservative application-memory cleanup.
+- DNS cache maintenance with administrator elevation when required.
+- Microsoft Sysinternals RAMMap standby-list cleanup.
 - Windows Update shortcut.
 - Programs Library with the supplied master software catalog.
 - Package modes: Mini, Standard, Full, Gaming + Overclocking, Video + Photo and Manual.
 - Ninite integration through the official Ninite selector.
 - Launchers/integrations for MSI Afterburner, AMD Ryzen Master and BlueStacks.
-- Windows x64 and ARM64 self-contained builds.
+- Windows x64 self-contained build.
 - Automated Windows `setup.exe` generation.
 
 ## 🧰 Setup installer
 
-The installer is designed to install the application itself, create Start Menu shortcuts and optionally create a desktop shortcut.
+The installer installs the application itself, creates Start Menu shortcuts and can create a desktop shortcut. Windows Optimizer requests administrator privileges at launch because several system-level features require elevated access.
 
 The application is published **self-contained with .NET 8**, so users do **not** need to install the .NET runtime separately. The setup performs a safe Windows-version check and detects `winget` for optional software installation through the Programs Library.
 
@@ -61,14 +67,14 @@ Windows Optimizer must never silently:
 - apply dangerous voltage/clock settings;
 - redistribute proprietary installers without permission.
 
-Administrative elevation is requested only when an operation actually requires it.
+Administrative elevation is used for the application because system-level features require it, while risky operations should still remain visible and user-controlled.
 
 ## 🏗️ Build locally
 
 Install the .NET 8 SDK on Windows:
 
 ```powershell
-dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+dotnet publish src/WindowsOptimizer/WindowsOptimizer.csproj -c Release -r win-x64 --self-contained true
 ```
 
 To build the Windows setup installer locally, install Inno Setup 6 and compile:
@@ -81,13 +87,14 @@ The generated installer is placed in `pkg/Windows/WindowsOptimizerSetup.exe`.
 
 ## 🤖 Automated builds
 
-`.github/workflows/release.yml` builds on pushes to `main`, manual workflow runs and version tags. It produces:
+`.github/workflows/release.yml` builds on pushes to `main`, manual workflow runs and version tags. Every successful `main` build updates the **Windows Optimizer - Latest** GitHub Release, which powers the direct download buttons above.
+
+Generated packages include:
 
 - `WindowsOptimizerSetup.exe`
 - `WindowsOptimizer-win-x64.zip`
-- `WindowsOptimizer-win-arm64.zip`
 
-A version tag such as `v1.0.0` additionally publishes the generated files to a GitHub Release.
+A version tag such as `v1.0.0` additionally publishes the generated files to a versioned GitHub Release.
 
 ## 📖 Documentation
 
